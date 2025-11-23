@@ -19,7 +19,7 @@ section {
 
 p {
   line-height: 1.6;
-  color: #000000;
+  color: #000;
 }
 
 /* === HERO === */
@@ -159,14 +159,30 @@ p {
   font-size: 1.1em;
 }
 
-.card-alunos { 
+/* === DE ALUNOS PARA ALUNOS — CARDS CORRIGIDOS === */
+.card-alunos {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   padding: 30px;
-  width: 400px;
+  width: 300px;           
+  min-height: 220px;      
   transition: transform 0.3s ease;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-alunos:hover {
+  transform: translateY(-8px);
+}
+
+.card-alunos h3 {
+  color: #7b2fff;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
 
 /* === COMO O HEYDEV NOS TRANSFORMOU === */
 .transformou {
@@ -180,11 +196,12 @@ p {
 }
 
 .transformou p {
-  color: #000000;
+  color: #000;
   max-width: 800px;
   margin: 0 auto 10px;
 }
 
+/* === VALORES === */
 .valores {
   display: flex;
   flex-wrap: wrap;
@@ -211,7 +228,7 @@ p {
   margin-bottom: 10px;
 }
 
-/* === DE ALUNOS PARA ALUNOS === */
+/* === COMPROMISSO === */
 .porque {
   background-color: #faf7ff;
 }
@@ -223,7 +240,7 @@ p {
 }
 
 .porque p {
-  color: #000000;
+  color: #000;
   max-width: 800px;
   margin: 0 auto 40px;
 }
@@ -290,7 +307,7 @@ p {
 /* === FOOTER === */
 footer {
   background: #fff;
-  color: #000000;
+  color: #000;
   padding: 50px 10%;
   border-top: 1px solid #eee;
   display: flex;
@@ -315,7 +332,7 @@ footer ul li {
 }
 
 footer ul li a {
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
@@ -338,13 +355,15 @@ footer .copyright {
   text-align: center;
   width: 100%;
   margin-top: 30px;
-  color: #000000;
+  color: #000;
 }
 
 /* === RESPONSIVO === */
 @media (max-width: 768px) {
+
   .cards,
   .valores,
+  .porque .cards,
   .atendimento .dados {
     flex-direction: column;
     align-items: center;
@@ -372,4 +391,3 @@ footer .copyright {
     align-items: flex-start;
   }
 }
-
